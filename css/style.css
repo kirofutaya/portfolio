@@ -378,6 +378,9 @@ body {
   background-size: cover;
   transform: none;
 }
+.work-text{
+  padding:30px 0;
+}
 
 
 .skills-wrapper,
