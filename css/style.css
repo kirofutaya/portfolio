@@ -323,6 +323,11 @@ body {
 
 
 /* メディアクエリ */
+@media (max-width: 1024px) {
+body{
+  background:none;
+}
+
 @media (max-width: 768px) {
 
 .site-title-sub::before,
