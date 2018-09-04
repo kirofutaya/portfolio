@@ -1,6 +1,6 @@
 $(function(){
   $('.site-title').ready(function(){
-    $('.site-title').fadeIn(1500);
+    $('.site-title').fadeIn(2000);
   });
 
   $(window).scroll(function (){

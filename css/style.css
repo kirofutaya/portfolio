@@ -325,9 +325,9 @@ body {
 /* jQuery用 */
 /* 画面外にいる状態 */
 .fadein {
-    opacity : 0.1;
-    transform : translate(0, 50px);
-    transition : all 500ms;
+    opacity : 0;
+    transform : translate(0, 40px);
+    transition : all 2000ms;
     }
 
 /* 画面内に入った状態 */
@@ -338,6 +338,7 @@ body {
 
 /* メディアクエリ */
 @media (max-width: 768px) {
+
 
 .site-title-sub::before,
 .site-title-sub::after{
@@ -367,6 +368,8 @@ body {
   font-size: 2.5rem;
 }
 .body{
+  background: #151515 url('../images/tokyo-origin.jpg') no-repeat ;
+  background-size: auto;
   font-size: 1.3rem
 }
 .profile-text{
