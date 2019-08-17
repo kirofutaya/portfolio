@@ -1,20 +1,31 @@
 $(function(){
+
   $('.site-title').ready(function(){
     $('.site-title').fadeIn(2000);
   });
 
   $(window).scroll(function (){
-        $('.fadein').each(function(){
+        $('.fadeinLeft').each(function(){
             var elemPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 200){
+            if (scroll > elemPos - windowHeight + 500){
                 $(this).addClass('scrollin');
             }
         });
     });
+    $(window).scroll(function (){
+          $('.fadeinRight').each(function(){
+              var elemPos = $(this).offset().top;
+              var scroll = $(window).scrollTop();
+              var windowHeight = $(window).height();
+              if (scroll > elemPos - windowHeight + 500){
+                  $(this).addClass('scrollin');
+              }
+          });
+      });
 
-    // スクロールボタン
+    //トップまで戻るスクロールボタン
     $(window).scroll(function() {
         if($(this).scrollTop() > 100) { // 100pxスクロールしていたら上に戻るボタンを表示
             $(".back-to-top").fadeIn();
@@ -23,6 +34,7 @@ $(function(){
         }
     });
 
+    //各セクションへのスクロールボタン
     $(".back-to-top").click(function() {
         $("body,html").animate({scrollTop:0},800); // 800msかけて上に戻る
     });
@@ -36,14 +48,14 @@ $(function(){
 
 
 
-    // スクロール
+    /////////スクロール
 
     var slideConts = document.querySelectorAll('.slideConts'); // スライドで表示させる要素の取得
     var slideContsRect = []; // 要素の位置を入れるための配列
     var slideContsTop = []; // 要素の位置を入れるための配列
     var windowY = window.pageYOffset; // ウィンドウのスクロール位置を取得
     var windowH = window.innerHeight; // ウィンドウの高さを取得
-    var remainder = 100; // ちょっとはみ出させる部分
+    var remainder = 400; // ちょっとはみ出させる部分
     // 要素の位置を取得
     for (var i = 0; i < slideConts.length; i++) {
       slideContsRect.push(slideConts[i].getBoundingClientRect());
