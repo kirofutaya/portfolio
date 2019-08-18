@@ -7,6 +7,7 @@
   <title>KIRO FUTAYA</title>
   <!-- フォント追加 -->
     <link href="https://fonts.googleapis.com/css?family=Judson:400,700" rel="stylesheet">
+
   <!-- アイコンフォント -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <!-- ノーマライズ -->
@@ -22,6 +23,15 @@
 
 <!-- ここからbody -->
 <body>
+
+<!-- ローディング -->
+<div id="is-loading">
+ <div id="loading">
+  <p>LOADING</p>
+  <img src="./images/815.svg">
+ </div>
+</div>
+
 
 <!-- ヘッダー -->
   <header class="header">
@@ -174,6 +184,7 @@
       <!-- <textarea name="message" placeholder="MESSAGE"></textarea> -->
       <input type="submit" value="SEND EMAIL">
     </form>
+    <div class="hidden_sentence">SNSのDMまでお願い致します</div>
     <div class="sns-wrapper">
       <div class="sns-box twitter">
         <a href="https://twitter.com/spinningtop24" target="_blank">
@@ -182,6 +193,10 @@
       <div class="sns-box instagram">
         <a href="https://www.instagram.com/double_valleys/" target="_blank">
         <i class="sns-icon fab fa-instagram"></i></a>
+      </div>
+      <div class="sns-box facebook">
+        <a href="https://www.facebook.com/profile.php?id=100008212892012" target="_blank">
+        <i class="sns-icon fab fa-facebook-f"></i></a>
       </div>
     </div>
   </section>

@@ -1,9 +1,36 @@
 $(function(){
+// ローディング
+ $(function() {
+ var h = $(window).height();
+  $('#loading__wrapper').css('display','none');
+  $('#is-loading ,#loading').height(h).css('display','block');
+ });
 
-  $('.site-title').ready(function(){
-    $('.site-title').fadeIn(2000);
+ $(window).load(function () {
+  $('#is-loading').delay(900).fadeOut(800);
+  $('#loading').delay(600).fadeOut(300);
+  $('#loading__wrapper').css('display', 'block');
+  $('.site-title').delay(1000).fadeIn(2500);
+ });
+
+ $(function(){
+  setTimeout('stopload()',10000);
   });
 
+  function stopload(){
+   $('#loading__wrapper').css('display','block');
+   $('#is-loading').delay(900).fadeOut(800);
+   $('#loading').delay(600).fadeOut(300);
+   $('.site-title').delay(1000).fadeIn(2500);
+  }
+
+// サイトタイトルのフェードイン
+  // $('.site-title').ready(function(){
+  //   $('.site-title').delay(900).fadeIn(2000);
+  // });
+
+
+// セクションタイトルのフェードイン（横から）
   $(window).scroll(function (){
         $('.fadeinLeft').each(function(){
             var elemPos = $(this).offset().top;
@@ -25,7 +52,7 @@ $(function(){
           });
       });
 
-    //トップまで戻るスクロールボタン
+//トップまで戻るスクロールボタン
     $(window).scroll(function() {
         if($(this).scrollTop() > 100) { // 100pxスクロールしていたら上に戻るボタンを表示
             $(".back-to-top").fadeIn();
@@ -34,12 +61,13 @@ $(function(){
         }
     });
 
-    //各セクションへのスクロールボタン
+//各セクションへのスクロールボタン
+    // トップへ
     $(".back-to-top").click(function() {
         $("body,html").animate({scrollTop:0},800);
         return false; // 800msかけて上に戻る
     });
-
+    // 各セクションへ
     $(".to-profile, .to-contact").click(function() {
       var href= $(this).attr("href");
       var target = $(href == "#" || href == "" ? 'html' : href);
@@ -48,11 +76,11 @@ $(function(){
       $("body,html").animate({scrollTop:position},800); // 800msかけて上に戻る
       return false;
     });
+        // return falseにするとアンカーリンクがなくなる！
 
 
 
-    /////////スクロール
-
+//セクションのスクロールイン
     var slideConts = document.querySelectorAll('.slideConts'); // スライドで表示させる要素の取得
     var slideContsRect = []; // 要素の位置を入れるための配列
     var slideContsTop = []; // 要素の位置を入れるための配列
