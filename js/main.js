@@ -44,6 +44,7 @@ $(function(){
       var href= $(this).attr("href");
       var target = $(href == "#" || href == "" ? 'html' : href);
       var position = target.offset().top;
+      position = position - 30;
       $("body,html").animate({scrollTop:position},800); // 800msかけて上に戻る
       return false;
     });

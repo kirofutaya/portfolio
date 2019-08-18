@@ -52,7 +52,6 @@ body {
   font-size: 1.6rem;
   opacity: 0.6;
   line-height: 2rem;
-
 }
 
 .button{
@@ -127,22 +126,14 @@ body {
   padding:80px 30px;
   background: #1c1c1c;
   color: #fff;
-
 }
-
 .heading {
   font-size: 7rem;
 }
-
-
 .profile-text{
   margin:30px 0;
   line-height: 3rem;
 }
-
-
-
-
 
 /*************** works ************/
 .works{
@@ -150,7 +141,6 @@ body {
   background-color: #1c1c1c;
   padding: 80px 0;
 }
-
 .works-wrapper{
   display: table;
   width: 100%;
@@ -185,7 +175,6 @@ body {
 .work-box.southAmerica::after{
   background-image: url("../images/uyuni_star.JPG");
 }
-
 .work-image{
   display: block;
   width: 100%;
@@ -593,12 +582,13 @@ body {
   background-size:cover;
   }
 
+
+  .site-description{
+    opacity: 0.8;
+  }
+  
   .profile{
     text-align: left;
-  }
-
-
-  .profile{
     margin: 0 0 10rem 1rem;
   }
   .works{
