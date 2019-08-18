@@ -36,7 +36,8 @@ $(function(){
 
     //各セクションへのスクロールボタン
     $(".back-to-top").click(function() {
-        $("body,html").animate({scrollTop:0},800); // 800msかけて上に戻る
+        $("body,html").animate({scrollTop:0},800);
+        return false; // 800msかけて上に戻る
     });
 
     $(".to-profile, .to-contact").click(function() {
@@ -44,6 +45,7 @@ $(function(){
       var target = $(href == "#" || href == "" ? 'html' : href);
       var position = target.offset().top;
       $("body,html").animate({scrollTop:position},800); // 800msかけて上に戻る
+      return false;
     });
 
 
