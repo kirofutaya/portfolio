@@ -574,8 +574,11 @@ body {
 }
 
 @media (max-width: 424px) {
+
+  /* iphoneはこうやらないposition:coverが効かない！ */
   body {
     background-image: none;
+    position: relative;
   }
   body:before{
   content:"";
@@ -594,19 +597,19 @@ body {
 
 
   .profile{
-    margin: 0 0 10rem 0rem;
+    margin: 0 0 10rem 1rem;
   }
   .works{
-    margin: 0 0rem 10rem 0;
+    margin: 0 1rem 10rem 0;
   }
   .skills{
-    margin: 0 0 10rem 0rem;
+    margin: 0 0 10rem 1rem;
   }
   .slideContsR.show{
-    transform: translate(3rem,0);
+    transform: translate(2rem,0);
   }
   .slideContsL.show{
-    transform: translate(-3rem,0);
+    transform: translate(-2rem,0);
   }
 
 }
