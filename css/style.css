@@ -15,7 +15,7 @@ body {
   color: #fff;
   text-align: center;
   font-size: 1.4rem;
-  font-family: Judson, "Hiragino Kaku Gothic ProN",  Meiryo, sans-serif;
+  font-family: Judson, "M PLUS 1p", "Hiragino Kaku Gothic ProN",  Meiryo, sans-serif;
 }
 
 /************** ローディング **********/
@@ -166,6 +166,9 @@ body {
   margin:0 5rem 10rem 0;
   background-color: #1c1c1c;
   padding: 80px 0;
+}
+.workText{
+    line-height: 3rem;
 }
 .works-wrapper{
   display: table;
