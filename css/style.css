@@ -277,7 +277,7 @@ body {
   width: 150px;
   height: 150px;
   margin-bottom: 30px;
-  border: 4px solid;
+  border: 2px solid;
   border-radius: 50%;
   color: #fffd99;
   font-size: 8rem;
@@ -591,9 +591,11 @@ body {
   height:100vh;
   background:url('../images/tokyo2_revised.jpg') center no-repeat;
   background-size:cover;
-}
+  }
 
-
+  .profile{
+    text-align: left;
+  }
 
 
   .profile{
